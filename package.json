@@ -1,0 +1,34 @@
+{
+  "name": "evaluation-js-template",
+  "version": "0.0.1",
+  "description": "This is a template repository to create test-ware for evaluating certain (JS) test automation tools.",
+  "main": "-",
+  "scripts": {
+    "test": "echo \"No tests defined\" && exit 1",
+    "lint": "eslint tests --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/szikszail/evaluation-template.git"
+  },
+  "keywords": [
+    "Test",
+    "automation",
+    "Tool",
+    "Evaluation",
+    "JavaScript"
+  ],
+  "author": "Idea Pool <SpecialEPM-DEBIdeaPoolStaff@epam.com>",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/idea-pool/evaluation-js-template/issues"
+  },
+  "homepage": "https://github.com/idea-pool/evaluation-js-template#readme",
+  "dependencies": {
+    "eslint": "^7.0.0",
+    "husky": "^4.2.5"
+  },
+  "husky": {
+    "precommit": "npm run lint"
+  }
+}
