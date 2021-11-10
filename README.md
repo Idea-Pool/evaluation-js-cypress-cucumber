@@ -1,44 +1,68 @@
-> To use this template, clone a new repository based on this and
-> 1. Fill out this README.md, guided by the tasks below
-> 1. Implement the test cases in the choosen framework which are listed in [TESTCASES_UI.md](TESTCASES_UI.md) or [TESTCASES_API.md](TESTCASES_API.md), depending on the type of the tests.
-> 1. Delete this quotation
-> 1. Delete tasks in all files
+# evaluation cypress-cucumber framework
 
-# evaluation-js-template
+## Built with
 
-- [ ] Update name to `evaluation-js-(framework name)` here and in `package.json` too, including repository URLs.
+| Library                       | Description                                                                                                            |
+|-------------------------------|------------------------------------------------------------------------------------------------------------------------|
+| [cypress-cucumber-preprocessor](https://github.com/TheBrainFamily/cypress-cucumber-preprocessor) |cucumber/gherkin-syntaxed specs with [Cypress.io](https://docs.cypress.io/) |
 
-This is a template repository to create test-ware for evaluating certain (**JS**) test automation tools.
+## Get Started
 
-- [ ] Update description to describe purpose of this repository, e.g. This is a test-ware for evaluation FRAMEWORK test automation tool.
+### Installation
 
-## Prerequisites
+    > yarn install
 
-1. Node.js LTS
-1. [ ] Add additional prerequisites if necessary
+## Implementing tests
 
-## Framework used
+Please find the detailed description in the source documentation:
 
-- [ ] Add name of the framework
-- [ ] Add URL to the homepage and API docs of the framework
-- [ ] Add brief description of the framework
+[How to write tests](https://github.com/TheBrainFamily/cypress-cucumber-preprocessor#how-to-write-tests)
 
-## Test cases
+### Folder Structure
 
-The implemented test cases can be found in [TESTCASES_UI.md](TESTCASES_UI.md) or [TESTCASES_API.md](TESTCASES_API.md), depending on the type of the tests.
+[How to organize tests](https://github.com/TheBrainFamily/cypress-cucumber-preprocessor#how-to-organize-the-tests)
 
-## Setup
+### Using Cucumber Expression
 
-```bash
-npm install
-```
+[Cucumber Expressions](https://github.com/cucumber/cucumber-expressions#readme)
 
-- [ ] Add additional setup instructions if necessary
+### Using RegExp
 
-## Execution
+Regular Expression support isn't going away. Cucumber supports both Cucumber Expressions and Regular Expressions for defining Step Definitions, but you cannot mix Cucumber Expression syntax with Regular Expression syntax in the same expression. 
+ 
+## Running tests
 
-```bash
-npm test
-```
+### Running tagged tests
 
-- [ ] Add additional instructions to run tests
+Use [Cucumber Tag Expression](https://cucumber.io/docs/cucumber/api/#tag-expressions).
+
+    > npx cypress-tags run -e TAGS='@current'
+
+### GUI with Cypress Test Runner
+
+[Opening Cypress](https://docs.cypress.io/guides/getting-started/installing-cypress#Opening-Cypress)
+
+    > npx cypress open
+
+## Idea Pool TA Tool evaluation
+
+In this unusual evaluation, the goal was to evaluate how a custom library can work with cypress.
+The focus was not on evaluation how cypress can solve the problem but to get some insights on how usable the cucumber plug-in is.
+
+For cypress evaluation please check this tech [talk](https://videoportal.epam.com/video/VRg27Lo2) of Laszlo Szikszai.
+
+## TODOS
+- [x] Cucumber integration possibilities / libraries
+- [x] Cucumber expression / RegExp
+- [x] Cucumber reference: hooks, tags, background, data table, steps, step arguments
+- [ ] Bundles
+- [ ] Sharing context / step memory
+
+## Evaluated Features:
+
+- [x] Hooks
+- [x] Tags
+- [x] Background
+- [x] Data Table
+- [x] Steps
+- [x] Outline
